@@ -1,0 +1,56 @@
+/********Style css pour le projet Web******************/
+
+/*********************Style géneraux*********************/
+img{
+    margin:0 auto;
+    width:75%;
+    margin-left: 10%;
+    margin-top:1%;
+}
+body{
+   background-image: url("../../images/fond.jpg");
+   background-repeat: no-repeat;
+   background-size: 100% 400%;
+}
+nav a{
+  color:white;  
+}
+nav a:hover{
+    background-color: red;
+    color:white;
+}
+.container{
+    margin-top:2%;
+}
+
+/**********************Style balise**************************/
+.txtGras{
+    font-weight: bold;
+}
+.carousel{
+    margin-left: -20%;
+    width: 110%;
+}
+.carousel-item{
+    width: 90%;
+    height: 50%;
+}
+p.info{
+    font-style:italic;
+    color:white;
+    
+}
+.pub{
+    width:80%;
+}
+.erreur{
+    font-weight: bold;
+    color:white;
+}
+.centrer{
+    text-align:center;
+}
+/**********************Style couleur****************************/
+.blanc{
+    color:white;
+}
