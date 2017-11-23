@@ -22,13 +22,19 @@ nav a:hover{
 .container{
     margin-top:2%;
 }
+h2{
+    color:white;
+}
 
 /**********************Style balise**************************/
 .txtGras{
     font-weight: bold;
 }
+.white{
+    color:white;
+}
 .carousel{
-    margin-left: -20%;
+    margin-left: -15%;
     width: 110%;
 }
 .carousel-item{
