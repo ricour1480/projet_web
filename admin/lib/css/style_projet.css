@@ -3,21 +3,37 @@
 /*********************Style géneraux*********************/
 img{
     margin:0 auto;
-    width:75%;
+    width:80%;
     margin-left: 10%;
     margin-top:1%;
+    
+}
+img #banniere{
+    margin-bottom:5%;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0%;
+    box-shadow: 0px 4px 4px #1c1a19;
+    width: 200%;
+    height:50%;
 }
 body{
-   background-image: url("../../images/fond.jpg");
+   /**background-image: url("../../images/fond.jpg");**/
+   background-color: #87CEEB;
    background-repeat: no-repeat;
    background-size: 100% 400%;
+   margin-bottom: 2%;
+   margin-top: -4%;
 }
+
 nav a{
   color:white;  
 }
 nav a:hover{
     background-color: red;
     color:white;
+    border-radius: 10px;
 }
 .container{
     margin-top:2%;
@@ -25,13 +41,42 @@ nav a:hover{
 h2{
     color:white;
 }
-
+/*footer{
+    position:fixed;
+    left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+}*/
 /**********************Style balise**************************/
 .txtGras{
     font-weight: bold;
 }
 .white{
     color:white;
+}
+.bckg{
+    background-color: #433e47;
+    /*display: block;*/
+    clear: both;
+}
+
+.text-center{
+    text-align: center;
+}
+.ligne{
+    margin-top: -2%;
+}
+input{
+    width: 50%;
+    
+}
+
+#bouton_commande{
+  margin-left: 100%;
+}
+#form-content label{
+    color: white;
 }
 .carousel{
     margin-left: -15%;
@@ -55,6 +100,12 @@ p.info{
 }
 .centrer{
     text-align:center;
+}
+.genre{
+    color:white;
+    text-decoration: underline;
+    font-size: 150%;
+    
 }
 /**********************Style couleur****************************/
 .blanc{

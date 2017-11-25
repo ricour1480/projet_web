@@ -4,16 +4,17 @@ $(document).ready(function () {
         interval: 1500,
         pause: false
     });
-
-    // On cache la zone de texte
-    $('#menuHamburger').hide();
-// toggle() lorsque le lien avec l'ID #toggler est cliqué
-    $('a#hamburger').click(function ()
-    {
-        $('#menuHamburger').toggle(400);
-        return false;
+    $("#choix").hide();
+    $("#id_genre").change(function(){
+         //on releve l'attribut name de la balise select
+        var parametre = $(this).attr('name');
+        //on recupere la valeur du select
+        var val = $(this).val();
+        //récréer l'URL
+        var refresh ='index.php?' + parametre + '=' + val +'&choix=1';
+        window.location.href=refresh;
     });
-
+ 
 });
 
 

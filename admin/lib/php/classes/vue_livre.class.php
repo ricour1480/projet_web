@@ -23,7 +23,7 @@ class vue_livre {
          try {            
             $query = "SELECT * FROM vue_livre where id_genre=:id";
             $resultset = $this->_db->prepare($query);  
-            $resultset->bindValue(':id_bouquin',$id);
+            $resultset->bindValue(':id',$id);
             $resultset->execute();
             $data = $resultset->fetchAll();
             //var_dump($data);
@@ -37,9 +37,10 @@ class vue_livre {
                 $_infoArray[] = $data;
             } catch (PDOException $e) {
                 print $e->getMessage();
+                //problème
             }
         }
-        return $_infoArray;
+      return $_infoArray;
     }
     
 
