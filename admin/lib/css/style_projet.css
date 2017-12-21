@@ -107,6 +107,9 @@ p.info{
     font-size: 150%;
     
 }
+.confirmer{
+    border-style: double;
+}
 /**********************Style couleur****************************/
 .blanc{
     color:white;

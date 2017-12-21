@@ -9,6 +9,9 @@
         <a href="index.php?page=commande" class="txtGras">Commander</a>
     </div>
     <div class="col-sm-11">
+        <a href="index.php?page=inscription" class="txtGras">S'inscrire</a>
+    </div>
+    <div class="col-sm-11">
         <a href="index.php?page=contact" class="txtGras">Contact</a>
     </div>
 </div>

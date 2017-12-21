@@ -21,26 +21,27 @@ class vue_livre {
     function getVueLivre($id){
         
          try {            
-            $query = "SELECT * FROM vue_livre where id_genre=:id";
+            $query = "SELECT * FROM vue_livre where ID_GENRE=:id";
             $resultset = $this->_db->prepare($query);  
             $resultset->bindValue(':id',$id);
             $resultset->execute();
-            $data = $resultset->fetchAll();
+            //$data = $resultset->fetchAll();
             //var_dump($data);
-            $resultset->execute();
+               while ($data = $resultset->fetch()) {
+            try {
+                $_infoArray[] = $data;
+                } catch (PDOException $e) {
+                    print $e->getMessage();
+                    //problème
+                }
+            }
+            return $_infoArray;
         } catch (PDOException $e) {
             print $e->getMessage();
         }
 
-        while ($data = $resultset->fetch()) {
-            try {
-                $_infoArray[] = $data;
-            } catch (PDOException $e) {
-                print $e->getMessage();
-                //problème
-            }
-        }
-      return $_infoArray;
+     
+      
     }
     
 

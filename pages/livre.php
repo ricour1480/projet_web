@@ -5,15 +5,17 @@ $tabGenre = $genre->getGenre();
 $nbrGenre = count($tabGenre);
 if (isset($_GET['choix'])) {
     $livre = new vue_livre($cnx);
+    //print $_GET['id_genre'];
     $tabLivre = $livre->getVueLivre($_GET['id_genre']);
-    $nbrLivre = count($tabLivre);
+    $nbrLivre = count($tabLivre);//n'est pas correcte
+    //print $nbrLivre;
 }
 ?>
 <h2>Nos Bouquins</h2>
 <div class="container">
     <form action="<?php print $_SERVER['PHP_SELF']; ?>" method="get"> 
         <div class="row">
-            <div class="col-sm-1">
+            <div class="col-sm-4">
                 <span class="txtGras white">GENRE</span>
             </div>
             <div class="col-sm-3">
@@ -79,19 +81,20 @@ if (isset($_GET['choix'])) {
                         <div class="row">
                             <div class="col-sm-12 txtGras">
                                 <br/>
-                                <a href="index.php?page=commande&id=<?php print $tabLivre[$i]['ID_BOUQUIN']; ?>">Commander</a>
+                                <a href="index.php?page=commande&id=<?php print $tabLivre[$i]['ID_BOUQUIN']; ?>&prix=<?php print $tabLivre[$i]['SOMME_LIVRE'] ?>">Commander</a>
                                 <br/>
                             </div>                             
                         </div>
                     </div>
-                    <?php
-                }//for $i
-                ?>
-            </div>
+                </div>
+                <?php
+            }//for $i
+            ?>
             <?php
         }//fin du if $nbrLivre
         else {
             ?><span class="white txtGras">Aucun livre ne fait partie de cette cat&eacute;gorie</span><?php
+            //Ne se fait pas
         }
     }//fin du if isset
     ?>
