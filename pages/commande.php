@@ -13,6 +13,7 @@ if (isset($_GET['confirmer_comm']) && isset($_SESSION['idcommande']) && isset($_
 }
 if (!isset($_SESSION['idclient'])) {
     ?>
+    <h2 class="white txtGras">Commande</h2>
     <div class="white txtGras">Veuillez d'abord vous connecter</div>
     <?php
 } else if (!isset($_GET['id']) && !isset($_SESSION['idcommande'])) {

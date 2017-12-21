@@ -14,9 +14,6 @@ if (isset($_GET['connexion_admin'])) {
 }
 if (isset($_SESSION['idadmin'])) {
     ?><a href="index.php?page=disconnect" class="btn btn-link"  name="bouton_deconnecter_admin" id="btn-deco-admin">Se Deconnecter</a>
-    <script type="text/javascript">
-        $("#bouton_connecter").hide();
-    </script> 
         <?php
     
 } else {

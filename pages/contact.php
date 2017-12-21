@@ -39,6 +39,6 @@ if(isset($_GET['confirmer']))
         </div>
     </div>
     <div class="form-group row">
-        <input type="submit"   class="col-sm-2 txtGras confirmer" id="confirmer" name="confirmer" value="CONFIRMER"/>
+        <input type="submit"   class="col-sm-4 txtGras confirmer" id="confirmer" name="confirmer" value="CONFIRMER"/>
     </div>
 </form>

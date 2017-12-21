@@ -13,6 +13,7 @@ if (isset($_GET['connexion'])) {
 }
 if (isset($_SESSION['idclient'])) {
   ?><a href="index.php?page=disconnect" class="btn btn-link"  name="bouton_deconnecter" id="bouton_deconnecter">Se Deconnecter</a><?php
+
 } else {
     ?>
     <button class="btn btn-link" data-toggle="modal" data-target="#fenetreConnexion" name="bouton_connecter" id="bouton_connecter">Se Connecter</button>

@@ -1,21 +1,12 @@
 
 <?php
-if(isset($_SESSION['idclient']))
+if(isset($_SESSION['idclient'])|| isset($_SESSION['idadmin']))
 {
-    unset($_SESSION['idclient']);
-    unset($_SESSION['idcommande']);
+    session_destroy();
 }
 else{
-     ?><?php
-}
-if(isset($_SESSION['idadmin'])){
-    unset($_SESSION['idadmin']);
-    
-}
-if(!isset($_SESSION['idadmin'])){
-    ?>
- <?php
-    
+     print "Vous êtes déconnecté";
 }
 ?>
+<meta http-equiv="refresh": content="2;url=index.php"/>
 <br/>

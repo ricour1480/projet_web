@@ -83,6 +83,7 @@ $cnx = Connexion::getinstance($dsn, $user, $pass);
             <footer><?php
                 if (file_exists("./lib/php/p_gt_footer.php")) {
                     include("./lib/php/p_gt_footer.php");
+                    print "Session :".$_SESSION['idadmin'];
                 }
                 ?>
             </footer>
