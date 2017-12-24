@@ -2,6 +2,7 @@
 <?php
 session_start();
 $_SESSION['idadmin']=$_GET['idadministrateur'];
+$idadmin = $_SESSION['idadmin'];
 include ("lib/php/php_file_include.php");
 $cnx = Connexion::getinstance($dsn, $user, $pass);?>
 <!doctype html>
@@ -50,7 +51,7 @@ $cnx = Connexion::getinstance($dsn, $user, $pass);?>
                                 }
                                 ?>
                             </div>
-                            <section>
+                            <section id="page_admin">
                                 <?php
                                 //on arrive sur le site
                                 if (!isset($_SESSION['page_admin'])) {

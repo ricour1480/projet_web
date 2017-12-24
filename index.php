@@ -24,7 +24,7 @@ $cnx = Connexion::getinstance($dsn, $user, $pass);
                     <div id="banniere"><img src="images/banniere_libraire.jpg" alt="banniere"/></div>
                 </div>
             </header>
-            <div class="container">
+            <div class="container page">
                 <div class="row">
                     <div class="col-sm-2">
                         <nav>

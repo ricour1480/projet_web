@@ -14,8 +14,11 @@ if (isset($_GET['confirmer_comm']) && isset($_SESSION['idcommande']) && isset($_
         unset($_SESSION['idcommande']);
         header('Location: index.php?page=accueil');
 }
+if(isset($_SESSION['idclient']))
+{
 $tableau = $panier->getPanierTemp($_SESSION['idclient']);
 $nbrAchat = count($tableau);
+}
 if (!isset($_SESSION['idclient'])) {
     ?>
     <h2 class="white txtGras">Commande</h2>

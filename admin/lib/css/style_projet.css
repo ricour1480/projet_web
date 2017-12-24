@@ -4,25 +4,27 @@
 img{
     margin:0 auto;
     width:80%;
-    margin-left: 10%;
     margin-top:1%;
-    
 }
-img #banniere{
+.bckg{
+    background-color: black;
+    width: 100%;
+}
+#banniere{
     margin-bottom:5%;
     border-radius: 10px;
-    position: relative;
-    margin-left: 0%;
-    margin-right: 0%;
+    padding-right: 5%;
     box-shadow: 0px 4px 4px #1c1a19;
     width: 200%;
     height:50%;
+    padding-left: 5%;
+    
 }
 body{
-   /**background-image: url("../../images/fond.jpg");**/
-   background-color: #87CEEB;
+   background-image: url("../../../images/background.png");
+   /**background-color: #87CEEB;**/
    background-repeat: no-repeat;
-   background-size: 100% 400%;
+   background-size: 100% 200%;
    margin-bottom: 2%;
    margin-top: -4%;
 }
@@ -90,6 +92,9 @@ p.info{
     font-style:italic;
     color:white;
     
+}
+#page_admin{
+    margin-left:5%;
 }
 .pub{
     width:80%;

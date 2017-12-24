@@ -2,7 +2,7 @@
 $info = new InfoDB($cnx);
 $texte = $info->getInfo("accueil");
 ?>
-<h2 class="txtGras genre">Accueil</h2>
+<h2 class="txtGras genre">Accueil : Administrateur</h2>
 <div class="row">
     <div class="col-sm-6">
         <div id="carousel" class="carousel slide" data-ride="carousel">
