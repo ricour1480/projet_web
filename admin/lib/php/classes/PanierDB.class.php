@@ -37,7 +37,7 @@ class PanierDB extends Panier {
     }
     public function suppPanierFictif($idclient){
         try{
-            $query="delete * from panier where idclient=:idclient";
+            $query="delete from panier where ID_CLIENT=:idclient";
             $resultset=$this->_db->prepare($query);
             $resultset->bindValue(':idclient',$idclient,PDO::PARAM_STR);
             $resultset->execute();

@@ -11,6 +11,7 @@ if (isset($_GET['connexion'])) {
         }
     }
 }
+
 if (isset($_SESSION['idclient'])) {
   ?><a href="index.php?page=disconnect" class="btn btn-link"  name="bouton_deconnecter" id="bouton_deconnecter">Se Deconnecter</a><?php
 

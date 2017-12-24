@@ -15,19 +15,17 @@
     <div class="col-sm-11">
         <a href="index.php?page=contact" class="txtGras">Contact</a>
     </div>
-    <?php
-    if (isset($_SESSION['idadmin'])) {
-        ?><div class="nav-item dropdown col-sm-11" id="menu_admin">
-            <a class="nav-link dropdown-toggle txtGras" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"aria-expanded="false">Administratio</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item txtGras" href="#">Action</a>
-                <a class="dropdown-item txtGras" href="#">Another action</a>
-                <a class="dropdown-item txtGras" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item txtGras" href="#">Separated link</a>
-            </div>
-        </div><?php
-    }
-    ?>
+    <!--<div class="nav-item dropdown col-sm-12" id="menu_admin">
+        <a class="nav-link dropdown-toggle txtGras" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"aria-expanded="false">Administratio</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item txtGras" href="#">Action</a>
+            <a class="dropdown-item txtGras" href="#">Another action</a>
+            <a class="dropdown-item txtGras" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item txtGras" href="#">Separated link</a>
+        </div>
+    </div>-->
+
+
 
 </div>

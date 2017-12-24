@@ -9,10 +9,11 @@ $(document).ready(function () {
     });
     $("#bouton_deconnecter").click(function(){
         $("#bouton_deconnecter").val("Se Connecter");
+        $("#menu_admin").hide();
     });
    
-    $("# btn-deco-admin").click(function(){
-        $("# btn-deco-admin").val("Administration");
+    $("#btn-deco-admin").click(function(){
+        $("#btn-deco-admin").val("Administration");
     });
     
 });

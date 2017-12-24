@@ -39,19 +39,22 @@ $cnx = Connexion::getinstance($dsn, $user, $pass);
                         <div class="row">
                             <div class="col-sm-8">
                                 <?php
-                                if (file_exists("./pages/Adminconnexion.php")) {
-                                    include("./pages/adminconnexion.php");
-                                } else {
-                                    print "OOOOOOUUUUUUUUUPPPPPPPSSSS";
+                                if (!isset($_SESSION['idclient'])) {
+                                    if (file_exists("./pages/Adminconnexion.php")) {
+                                        include("./pages/adminconnexion.php");
+                                    } else {
+                                        print "OOOOOOUUUUUUUUUPPPPPPPSSSS";
+                                    }
                                 }
                                 ?>
                             </div>
                             <div class="col-sm-4"><?php
-                            
-                                if (file_exists("./pages/connexion.php")) {
-                                    include("./pages/connexion.php");
-                                } else {
-                                    print "OOOOOOUUUUUUUUUPPPPPPPSSSS";
+                                if (!isset($_SESSION['idadmin'])) {
+                                    if (file_exists("./pages/connexion.php")) {
+                                        include("./pages/connexion.php");
+                                    } else {
+                                        print "OOOOOOUUUUUUUUUPPPPPPPSSSS";
+                                    }
                                 }
                                 ?>
                             </div>
@@ -83,7 +86,7 @@ $cnx = Connexion::getinstance($dsn, $user, $pass);
             <footer><?php
                 if (file_exists("./lib/php/p_gt_footer.php")) {
                     include("./lib/php/p_gt_footer.php");
-                    print "Session :".$_SESSION['idadmin'];
+                    //print "Session :" . $_SESSION['idadmin'];
                 }
                 ?>
             </footer>

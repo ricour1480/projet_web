@@ -8,12 +8,13 @@ if (isset($_GET['connexion_admin'])) {
         $retourid = $verifAdmin->verifadmin($loginCoAdmin,$mpCoAdmin);
         if ($retourid) {
             $_SESSION['idadmin'] = $retourid;
+            header('Location: admin/index.php?page_admin=accueil&idadministrateur='.$retourid.'');
         }
     }
     
 }
 if (isset($_SESSION['idadmin'])) {
-    ?><a href="index.php?page=disconnect" class="btn btn-link"  name="bouton_deconnecter_admin" id="btn-deco-admin">Se Deconnecter</a>
+    ?><a href="../index.php?page=disconnect" class="btn btn-link"  name="bouton_deconnecter_admin" id="btn-deco-admin">Se Deconnecter</a>
         <?php
     
 } else {

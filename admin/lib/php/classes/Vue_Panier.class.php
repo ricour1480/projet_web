@@ -25,9 +25,9 @@ class Vue_Panier {
         try {
             $query = "insert into panier(ID_BOUQUIN,ID_CLIENT,PRIX) values(:idlivre,:idclient,:prix)";
             $resultset = $this->_db->prepare($query);
-            $resultset->bindValue(':idlivre', $idlivre);
-            $resultset->bindValue(':idclient', $idclient);
-            $resultset->bindValue(':prix', $prix);
+            $resultset->bindValue(':idlivre', $idlivre,PDO::PARAM_STR);
+            $resultset->bindValue(':idclient', $idclient,PDO::PARAM_STR);
+            $resultset->bindValue(':prix', $prix,PDO::PARAM_STR);
             $resultset->execute();
             //var_dump($data);
         } catch (PDOException $e) {
@@ -41,7 +41,7 @@ class Vue_Panier {
 
             $query = "SELECT * FROM vue_panier where ID_CLIENT=:idclient";
             $resultset = $this->_db->prepare($query);
-            $resultset->bindValue(':idclient', $idclient);
+            $resultset->bindValue(':idclient', $idclient,PDO::PARAM_STR);
             //var_dump($data);
             $resultset->execute();
             $data=$resultset->fetchAll();
