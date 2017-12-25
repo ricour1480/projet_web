@@ -6,6 +6,9 @@ img{
     width:80%;
     margin-top:1%;
 }
+h2{
+    text-decoration: underline;
+}
 .bckg{
     background-color: black;
     width: 100%;
@@ -53,6 +56,12 @@ h2{
 /**********************Style balise**************************/
 .txtGras{
     font-weight: bold;
+}
+table{
+    overflow-y: hidden;
+}
+.over:hover{
+    background-color: #2ca9c4;
 }
 .white{
     color:white;
