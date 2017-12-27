@@ -1,7 +1,7 @@
 <!--Page index pour le coté admin-->
 <?php
 session_start();
-$_SESSION['idadmin']=$_GET['idadministrateur'];
+$_SESSION['idadmin']=$_SESSION['idadmin'];
 $idadmin = $_SESSION['idadmin'];
 include ("lib/php/php_file_include.php");
 $cnx = Connexion::getinstance($dsn, $user, $pass);?>

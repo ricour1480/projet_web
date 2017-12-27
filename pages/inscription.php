@@ -47,7 +47,7 @@ if(isset($_GET['bouton_inscrire'])){
     </div>
     <div class="form-group row">
         <label for="codepostal" class="col-form-label col-sm-2">CP:</label>
-        <div class="col-sm-2">
+        <div class="col-sm-5">
             <input type="number" class="form-control" name="codepostale" id="codepostale"/>
         </div>
         <div class="col-sm-6">

@@ -8,7 +8,7 @@ if (isset($_GET['connexion_admin'])) {
         $retourid = $verifAdmin->verifadmin($loginCoAdmin,$mpCoAdmin);
         if ($retourid) {
             $_SESSION['idadmin'] = $retourid;
-            header('Location: admin/index.php?page_admin=accueil&idadministrateur='.$retourid.'');
+            header('Location: admin/index.php?page_admin=accueil&idadministrateur='.$_SESSION['idadmin'].'');
         }
     }
     
