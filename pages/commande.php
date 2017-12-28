@@ -41,7 +41,7 @@ if (isset($_SESSION['idcommande']) && isset($_SESSION['idclient']) && isset($_GE
     <div class="container">
         <span class="white txtGras"><?php print $erreur ?></span>
         <div class="row">
-            <div class="col-sm-3 txtGras white">Panier :
+            <div class="col-sm-6 txtGras white">Panier :
                 <br/>
                 <form action="<?php print $_SERVER['PHP_SELF']; ?>" method="get">
                     <?php

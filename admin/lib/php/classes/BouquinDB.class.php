@@ -31,4 +31,47 @@ class BouquinDB extends Bouquin {
         }
         
     }
+    public function addLivre($auteur,$editeur,$image,$prix,$titre){
+        try{
+            $query="insert into bouquin(AUTEUR,EDITEUR,image,SOMME_LIVRE,TITRE)values(:auteur,:editeur,:image,:prix,:titre)";
+            $resultset=$this->_db->prepare($query);
+            $resultset->bindValue(':auteur',$auteur,PDO::PARAM_STR);
+            $resultset->bindValue(':editeur',$editeur,PDO::PARAM_STR);
+            $resultset->bindValue(':image',$image,PDO::PARAM_STR);
+            $resultset->bindValue(':prix',$prix,PDO::PARAM_INT);
+            $resultset->bindValue(':titre',$titre,PDO::PARAM_STR);
+            $resultset->execute();
+            //$data=$resultset->fetchAll();
+            //var_dump($data);
+        }catch(PDOException $e){
+            print "Erreur : ".$e->getMessage();
+        }
+           
+        
+
+    }
+    public function getIdBouquin() {
+        try{
+            $query="select max(ID_BOUQUIN) from bouquin;";
+            $resultset=$this->_db->prepare($query);
+            $resultset->execute();
+            $retour = $resultset->fetch();
+            return $retour;
+        }catch(PDOException $e){
+            print "Erreur : ".$e->getMessage();
+        }
+    }
+    public function addgenreLivre($idbouquin,$idgenre){
+        try{
+            $query="insert into genre_bouquin(ID_BOUQUIN,ID_GENRE) values(:idbouquin,:idgenre)";
+            $resultset=$this->_db->prepare($query);
+            $resultset->bindValue(':idbouquin',$idbouquin,PDO::PARAM_INT);
+            $resultset->bindValue(':idgenre',$idgenre,PDO::PARAM_INT);
+            $resultset->execute();
+            //$data=$resultset->fetchAll();
+            //var_dump($data);
+        }catch(PDOException $e){
+            print "Erreur : ".$e->getMessage();
+        }
+    }
 }

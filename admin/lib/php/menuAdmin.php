@@ -10,7 +10,7 @@
         <div class="dropdown-menu">
             <a class="dropdown-item txtGras" href="index.php?page_admin=clientDelete&idadministrateur=<?php print $_SESSION['idadmin'];?>">Supprimer un client</a>
             <a class="dropdown-item txtGras" href="index.php?page_admin=CommandeDelete&idadministrateur=<?php print $_SESSION['idadmin'];?>">Supprimer une commande</a>
-            <a class="dropdown-item txtGras" href="#">Supprimer un livre</a>
+            <a class="dropdown-item txtGras" href="index.php?page_admin=AjoutBouquin&idadministrateur=<?php print $_SESSION['idadmin'];?>">Ajouter un livre</a>
         </div>
     </div>
 
